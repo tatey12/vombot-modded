@@ -1,9 +1,5 @@
 var discord_interface = require('./lib/discord_interface.js');
-var http_server = require('./lib/http_server.js');
-var irc_twitch = require('./lib/irc_twitch.js');
-var irc_botb = require('./lib/irc_botb.js');
 var markov = require('./lib/markov.js');
-var twitch_assets = require('./lib/twitch_assets.js');
 var ws_server = require('./lib/ws_server.js');
 
 
@@ -22,12 +18,4 @@ curl.get('https://api.twitch.tv/kraken/channels/puke7/follows', {
 /*
  * initialize services
  */
-twitch_assets.initialize();
 discord_interface.initialize();
-irc_twitch.initialize();
-irc_botb.initialize();
-http_server.initialize();
-ws_server.initialize();
-
-
-
